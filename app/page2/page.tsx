@@ -18,13 +18,19 @@ const Page: React.FC = () => {
         The expected behaviour is for nextjs to do a client side navigation only
         and not a full page refresh
       </p>
-      <button
-        onClick={() => {
-          router.push("/page1");
-        }}
-      >
-        Page 1
-      </button>
+      <div>
+        <button
+          style={{
+            padding: "5px",
+          }}
+          onClick={(event) => {
+            event?.preventDefault();
+            router.push("/page1");
+          }}
+        >
+          Page 1
+        </button>
+      </div>
     </>
   );
 };
