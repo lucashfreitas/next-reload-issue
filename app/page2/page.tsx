@@ -24,7 +24,6 @@ const Page: React.FC = () => {
             padding: "5px",
           }}
           onClick={(event) => {
-            event?.preventDefault();
             router.push("/page1");
           }}
         >
