@@ -10,8 +10,14 @@ const Page: React.FC = () => {
         This is page 2 - should do only a client side navigation when go to page
         1
       </h1>
-      But if you inspect your network tab note that we are doing a full page
-      refresh and requesting a new document.
+      <p>
+        But if you inspect your network tab note that we are doing a full page
+        refresh and requesting a new document.
+      </p>
+      <p>
+        The expected behaviour is for nextjs to do a client side navigation only
+        and not a full page refresh
+      </p>
       <button
         onClick={() => {
           router.push("/page1");
